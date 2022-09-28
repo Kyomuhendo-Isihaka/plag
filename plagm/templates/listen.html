@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<style>
+    .panel{
+        overflow: auto;
+        resize: vertical;
+        height: 450px;
+        margin-top: 15px;
+    }
+</style>
+<form action="#" method="POST" enctype="multipart/form-data" class="mt-4">
+    {% csrf_token %}
+    <label for=""><b>Upload File to Listen </b></label>
+    <input type="file" name="file" id="">
+
+    <input type="submit" value="Read" name="read" class="w3-btn w3-blue" id="">
+
+
+</form>
+
+<div class="panel">
+    {{text}}
+</div>
+{% endblock %}
