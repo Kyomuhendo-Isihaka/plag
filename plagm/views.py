@@ -5,7 +5,7 @@ from turtle import ht
 from urllib.parse import uses_relative
 from urllib.request import HTTPCookieProcessor
 from django.shortcuts import render, redirect
-from plag import plag_detection as pld
+from plagm import plag_detection as pld
 from django.core.files.storage import FileSystemStorage
 import pathlib
 import os
@@ -38,7 +38,7 @@ def register(request):
         passwordConfirm = request.POST.get('passwordConfirm')
 
         if password==passwordConfirm:
-            pld.register(name, email, password, contact)
+            # pld.register(name, email, password, contact)
 
             print("good to go")
         else:
